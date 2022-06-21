@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="{% static 'css/java.js' %}"></script>
+        <link rel="shortcut icon" href="/static/image/Sunlogo.jpg" type="image/x-icon">
+        <title>{% block title %} Sun Enterprises/Home Page {% endblock title %}</title>
+    </head>
+
+    
+
+    <body>
+        <div style="background-color: rgb(255, 195, 0 ); height: 30px;" class="container-fluid">
+            <div class="row">
+           <div style="border-right: solid 3px white; text-align: center;"class="col-lg-3 col-sm-6 col-md-6 px-3">Opening Time: 8:00AM-6:00PM</div>  
+           <div style="border-left: solid 3px white;" class="col-lg-3 col-md-6 offset-lg-4"><img style="width:18px ;" src="/static/image/red_phone_icon.png" alt="">+91-8459165341,9971272694</div>  
+           <div style="border-left: solid 3px white;" class="col-lg-2 col-md-6"><img style="width:20px ;" src="/static/image/Mail_pic.png">  info@sunrealfacilty.com</div>  
+            </div>
+        </div>
+
+        <!-- Navgation Bar -->
+        <div class="container-fluid">
+            <div style="height:70px;" class="row">
+                <div class="col-lg-2"><center><img style="width:80px; height:80px;" src="/static/image/Sunlogo.jpg" alt=""></div></center>
+                <div class="col-lg-6 offset-lg-1 py-2 ">
+                    <ul>
+                        <li style="float:left; list-style: none; padding-left:80px ; padding-top: 20px; font-size: large; font-weight: 500;"><a style="text-decoration: none;" href="{% url 'home' %}"> Home</li></a>
+                        <li style="float:left; list-style: none; padding-left:80px ; padding-top: 20px; font-size: large; font-weight: 500;"><a style="text-decoration: none;" href="{% url 'about_us' %}"> About Us</li></a>
+                        <li style="float:left; list-style: none; padding-left:80px ; padding-top: 20px; font-size: large; font-weight: 500;"><a style="text-decoration: none;" href="{% url 'service' %}"> Our Services</li></a>
+                        <li style="float:left; list-style: none; padding-left:80px ; padding-top: 20px; font-size: large; font-weight: 500;"><a style="text-decoration: none;" href="{% url 'contact_us' %}"> Contact</li></a>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+
+        {% block content %}
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+          
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img style="height: 500px;" src="/static/image/cleaning_office.webp" alt="Los Angeles" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img style="height: 500px;" src="/static/image/sanitazion.png" alt="Chicago" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img style="height: 500px;" src="/static/image/clean_floor.png" alt="New York" class="d-block w-100">
+              </div>
+            </div>
+          
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div style="padding-top: 80px;" class="container">
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <h1 style="color: red;" > <u> Why Choose Us </u></h1><br>
+                <p>The reputation and branding success of any organization is reflected via its facilities. Impeccably managed, clean, and maintained commercial properties are adored by the employees & stakeholders alike.
+
+                  We, at MSG, have perfected the process of selecting & deploying highly trained staff to meet your facility management demands. Our proactive customer support and response ensures unparalleled client satisfaction. Our soft-services staff is well trained and undertakes all the tasks on time, every time. If you are looking for a reliable facility management crew, MSG stands eager to serve you with its 3+ decades of experience.</p>
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <img style="width: 300px; margin-left: 100px;" src="/static/image/why_choose_us.jfif" alt="">
+              </div>
+            </div>
+          </div>
+          <br><hr>
+
+          <div class="container">
+            <div class="row">
+              <h1 style="text-align:center; padding-top: 50px; color: red;"><u> Nothing is more than our Customers</u></h1>
+              <p style="text-align: center;">We Priotize our Customer First</p>
+            </div>
+            <div style="padding-top: 90px;" class="row">
+              <div class="col-lg-3 col-md-6 col-md-12">
+                <center><img style="width:70px" src="/static/image/environment_icon.png" alt=""></center>
+                <h3 style="text-align: center;padding-top: 10px;" >The Environment</h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-md-12">
+                <center><img style="width:70px" src="/static/image/quality_icon.png" alt=""></center>
+                <h3 style="text-align: center;padding-top: 10px;" >Quality Services</h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-md-12">
+                <center><img style="width:70px" src="/static/image/customer_icon.png" alt=""></center>
+                <h3 style="text-align: center;padding-top: 10px;" >Our Customers</h3>
+              </div>
+              <div class="col-lg-3 col-md-6 col-md-12">
+                <center><img style="width:70px" src="/static/image/environment_icon.png" alt=""></center>
+                <h3 style="text-align: center;padding-top: 10px;" >The Environment</h3>
+              </div>
+            </div>
+          </div>
+
+        {% endblock content %}
+; 
+        <div style="background-color:rgb(255, 195, 0 ); height:400px; margin-top: 200px;";  class="container-fluid">
+            
+          <div class="row ">
+            <div  class="col-lg-3">
+                <img style="padding-left: 70px; padding-top:50px ; width: 400px;" src="/static/image/LOGO.png" alt="Logo">
+            </div>
+            <div  class="col-lg-3 ">
+                <h4 style="padding-left: 70px; padding-top: 30px;"><u>Our Services</u></h4>
+            
+            <div>
+                <ul>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black; " href="{% url 'service' %}">Soft Services</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black; " href="{% url 'service' %}">Technical Services</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black; " href="{% url 'service' %}">Sanitization Services</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black; " href="{% url 'service' %}">Buisness Support Services</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black; " href="{% url 'service' %}">Specialised cleaning Services</a></li>
+                </ul>
+            </div></div>
+            <div  class="col-lg-3 ">
+                <h4 style="padding-left: 70px; padding-top: 30px;"><u>Others</u></h4>
+            
+            <div>
+                <ul>
+                  <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black;" href="{% url 'contact_us' %}">Contact us</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black;" href="">Clientele</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black;" href="">Testimonials</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black;" href="">Careers</a></li>
+                    <li style="padding-top: 20px; padding-left: 50px; list-style-type:none; "><a style="text-decoration:none; color: black;" href="">Gallery</a></li>
+                </ul>
+            </div></div>
+            <div  class="col-lg-3 ">         
+                <div style="padding-top: 40px;"><img style="width:50px ;" src="/static/image/location_pic.png"><p> G-210, Sai Heritage, Chhapraula, Gautam Budha Nagar, U.P.</p></div>
+                <div style="padding-top: 20px;"><img style="width:50px ;" src="/static/image/Mail_pic.png"><p> info@sunrealfacility.com</p></div>
+                <div style="padding-top: 20px;"><img style="width:50px ;" src="/static/image/WhatsApp_icon.png"><p>+91-8459165341, 9971272694</p></div>
+            </div>
+        
+          </div>
+        </div>  
+        
+
+
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
