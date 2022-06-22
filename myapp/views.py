@@ -28,9 +28,9 @@ def email(request):
         if name and email and mobile and enquiry:
             subject="Enquiry from Website"
             matter=f"{name} and {email} and {mobile} and {enquiry}"
-            from_email=settings.EMAIL_HOST_USER
+            from_email='rohit9258736537@gmail.com'
             try:
-                send_mail(subject,matter, from_email,"info@sunrealfacility.com")
+                send_mail('subject','matter', 'rohit9258736537@gmail.com',"info@sunrealfacility.com")
 
             except:
                 messages.info(request,"Email not Sent , Please try Again")
