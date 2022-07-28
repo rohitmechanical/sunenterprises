@@ -1,8 +1,14 @@
 from django.contrib import messages
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.conf import settings
 from django.core.mail import send_mail
-
+import pywhatkit
+import time
+import webbrowser as web
+from urllib.parse import quote
+import pyautogui as pg
+from pyautogui import hotkey
 # Create your views here.
 
 
@@ -33,9 +39,15 @@ def email(request):
                 send_mail('subject','matter', 'rohit9258736537@gmail.com',"info@sunrealfacility.com")
 
             except:
-                messages.info(request,"Email not Sent , Please try Again")
-                return render(request,'contact_us.html')
-                
+                web.open(f"https://web.whatsapp.com/send?phone={918459165341}&text={quote(mobile)}",0,True)
+                time.sleep(15)
+                pg.hotkey("enter")
+                time.sleep(2)
+                pg.hotkey("ctrl","w")
+                pg.hotkey("enter")
+                messages.success(request,"Whatapp message send")
+                return redirect("contact_us")
+
         else:
             messages.info(request,"All Fields Mandatory, Please try Again, Thank You")    
             return render(request,'contact_us.html')
